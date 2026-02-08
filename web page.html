@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://hospital-demo.com/">
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital Appointment Booking System">
+
+    <title>Hospital Appointment Booking</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, nav, section, article, aside, footer {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        figure img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>City Care Hospital</h1>
+    <p>Book your appointment easily</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#booking">Book Appointment</a> |
+    <a href="#doctors">Doctors</a> |
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<main>
+
+<!-- Appointment Section -->
+<section id="booking">
+    <h2>Appointment Booking Form</h2>
+
+    <form>
+        <fieldset>
+            <legend>Patient Details</legend>
+
+            <label>Patient Name:</label><br>
+            <input type="text" required><br><br>
+
+            <label>Age:</label><br>
+            <input type="number"><br><br>
+
+            <label>Department:</label><br>
+            <select>
+                <option>General Medicine</option>
+                <option>Cardiology</option>
+                <option>Orthopedics</option>
+                <option>Neurology</option>
+            </select><br><br>
+
+            <label>Doctor Name:</label><br>
+            <input list="doctors"><br>
+            <datalist id="doctors">
+                <option value="Dr. Sharma">
+                <option value="Dr. Reddy">
+                <option value="Dr. Kumar">
+            </datalist><br><br>
+
+            <label>Appointment Date:</label><br>
+            <input type="date"><br><br>
+
+            <button type="button" onclick="confirmBooking()">Confirm Appointment</button><br><br>
+
+            <!-- Output -->
+            <output id="result"></output>
+        </fieldset>
+    </form>
+</section>
+
+<!-- Doctors Article -->
+<section id="doctors">
+    <article>
+        <h2>Our Specialist Doctor</h2>
+
+        <figure>
+            <img src="doctor.jpg" alt="Doctor Image">
+            <figcaption>Dr. Sharma – Cardiologist</figcaption>
+        </figure>
+
+        <p>Available on <time datetime="2026-02-10">10 February 2026</time></p>
+    </article>
+</section>
+
+<!-- Aside -->
+<aside>
+    <h3>Health Tips</h3>
+    <p>Drink water regularly and exercise daily.</p>
+</aside>
+
+</main>
+
+<!-- Footer -->
+<footer id="contact">
+    <p>Contact: citycare@hospital.com</p>
+    <p>&copy; 2026 City Care Hospital</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    function confirmBooking() {
+        document.getElementById("result").value =
+            "Appointment booked successfully!";
+    }
+</script>
+
+<!-- No Script -->
+<noscript>
+    JavaScript is disabled in your browser.
+</noscript>
+
+</body>
+</html>
